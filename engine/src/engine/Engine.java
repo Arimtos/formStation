@@ -21,7 +21,7 @@ public class Engine {
 		String body = "This is Body";
 		htmlString = htmlString.replace("$title", title);
 		htmlString = htmlString.replace("$body", body);
-		File newHtmlFile = new File("path/new.html");
+		File newHtmlFile = new File("new.html");
 		FileUtils.writeStringToFile(newHtmlFile, htmlString,"UTF-8");
 
 	}
