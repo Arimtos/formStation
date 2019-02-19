@@ -17,7 +17,7 @@ public class Engine {
    public void run() throws IOException{
 		htmlTemplateFile = new File("template.html");
 		htmlString= FileUtils.readFileToString(htmlTemplateFile, "UTF-8");
-		String title = "New Page";
+		String title = "New Pages";
 		String body = "This is Body";
 		htmlString = htmlString.replace("$title", title);
 		htmlString = htmlString.replace("$body", body);
