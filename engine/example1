@@ -1,21 +1,42 @@
-<xforms>
-<model>
-  <instance>
-  <person>
-    <fname/>
-    <lname/>
-  </person>
-  </instance>
-  <submission id="form1" method="get"
-   action="submit.asp"/>
-</model>
+<!DOCTYPE html>
+<html>
+<head>
+<title> </title>
+ <xforms:model>
+      <xforms:instance>
+        <my:name@as="credit">
+        <my:age/>
+        <my:occupation/>
+        <my:gender/>
+        <my:hobbies/>
+      </xforms:instance>
+      <xforms:submission@action="http://www.example.com/buy.rb"@method="post"@id="s00" />
+    </xforms:model>
+<body>
+  <h1> General info
 
-<input ref="fname">
-<label>First Name</label></input><br />
+  <Xf:form>
+    <xf:Input@label="Name:"@bind="name"/>
+    <xf:Input@label="Age:"@bind="age"/>
+    <xf:Input@label="Occupation:"@bind="occupation"/>
+    <xf:radio@label="gender"@bind="gender">
+        <xf:item@text="Male"@value="Male" />
+        <xf:item@text="Female"@value="female" />
+    <xf:radio/>
+    <xf:select@label="hobbies"@bind="hobbies">
+        <xf:item@text="hobby"@value="hobby1"/>
+        <xf:item2text="hobby"@value="hobby2"/>
+        <xf:item@text="hobby"@value="hobby3"/>
+        <xf:item@text="hobby"@value="hobby4"/>
+   </xf:select>
+   </xf:form>
+ </body>
+ </html>
+   
+       
 
-<input ref="lname">
-<label>Last Name</label></input><br /><br />
 
-<submit submission="form1">
-<label>Submit</label></submit>
-</xforms>
+
+
+
+
